@@ -10,10 +10,22 @@ public class Questions {
         arr[index2] = temp;
     }
 
+    public static int max(int[] arr) {
+        int maxVal = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (maxVal < arr[i]) {
+                maxVal = arr[i];
+            }
+        }
+        return maxVal;
+    }
+
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 4, 5 };
-        System.out.println(Arrays.toString(arr));
-        swap(arr, 0, 4);
-        System.out.println(Arrays.toString(arr));
+        int[] arr2 = { 4, 1, 9, 30, 0, 33 };
+        System.out.println(max(arr2));
+        // System.out.println(Arrays.toString(arr));
+        // swap(arr, 0, 4);
+        // System.out.println(Arrays.toString(arr));
     }
 }
