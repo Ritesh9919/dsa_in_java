@@ -28,10 +28,30 @@ public class Questions {
         return -1;
     }
 
+    public static int min(int[] arr) {
+        int min = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+
+    public static int max(int[] arr) {
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
     public static void main(String[] args) {
-        String str = "ritesh";
-        char target = 's';
-        System.out.println(searchInString(str, target));
+        // String str = "ritesh";
+        // char target = 's';
+        // System.out.println(searchInString(str, target));
         int[] arr = { 1, 2, 3, 4, 5, 6 };
         System.out.println(searchInRange(arr, 5, 2, 5));
     }
