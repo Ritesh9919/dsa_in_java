@@ -63,6 +63,30 @@ public class Questions {
 
     }
 
+    public static int maxValIn2dArray(int[][] arr2d) {
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < arr2d.length; i++) {
+            for (int j = 0; j < arr2d[i].length; j++) {
+                if (max < arr2d[i][j]) {
+                    max = arr2d[i][j];
+                }
+            }
+        }
+        return max;
+    }
+
+    public static int minValIn2dArray(int[][] arr2d) {
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < arr2d.length; i++) {
+            for (int j = 0; j < arr2d[i].length; j++) {
+                if (min > arr2d[i][j]) {
+                    min = arr2d[i][j];
+                }
+            }
+        }
+        return min;
+    }
+
     public static void main(String[] args) {
         // String str = "ritesh";
         // char target = 's';
