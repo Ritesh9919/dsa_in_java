@@ -56,11 +56,26 @@ public class Sorting {
         }
     }
 
+    public static void cyclicSort(int[] arr) {
+        int i = 0;
+        while (i < arr.length) {
+            int currectIndex = arr[i] - 1;
+            if (arr[i] != arr[currectIndex]) {
+                int temp = arr[currectIndex];
+                arr[currectIndex] = arr[i];
+                arr[i] = temp;
+            } else {
+                i++;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         int[] arr = { 3, 1, 4, 5, 2 };
         // bubbleSort(arr);
         // selectionSort(arr);
-        insertionSort(arr);
+        // insertionSort(arr);
+        cyclicSort(arr);
         System.out.println(Arrays.toString(arr));
 
     }
